@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #121212;
+}
+
+svg {
+  max-width: 600px;
+}
+
+svg g {
+  fill-opacity: 0;
+  animation: fill 2s 3s forwards;
+}
+
+svg g path {
+  stroke-dashoffset: 1800;
+  stroke-dasharray: 1800;
+  animation: border 5s forwards;
+}
+
+@keyframes border {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fill {
+  to {
+    fill-opacity: 1;
+  }
+}
