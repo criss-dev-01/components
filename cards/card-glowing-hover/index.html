@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card Glowing Hover</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h3>Card Title</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem tenetur quam doloremque mollitia hic nihil id iusto aliquam quod eaque officiis labore eos maxime doloribus tempore, omnis soluta dicta illum.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem tenetur quam doloremque mollitia hic nihil id iusto aliquam quod eaque officiis labore eos maxime doloribus tempore, omnis soluta dicta illum.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem tenetur quam doloremque mollitia hic nihil id iusto aliquam quod eaque officiis labore eos maxime doloribus tempore, omnis soluta dicta illum.</p>
+    </div>
+  </div>
+  <script>
+    const cards = document.querySelectorAll('.card')
+    cards.forEach(card => {
+      card.onmousemove = function (e) {
+        const x = e.pageX - card.offsetLeft
+        const y = e.pageY - card.offsetTop
+
+        card.style.setProperty('--x', `${x}px`)
+        card.style.setProperty('--y', `${y}px`)
+      }
+    })
+  </script>
+</body>
+</html>
